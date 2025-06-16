@@ -12,16 +12,25 @@ config_version=5
 
 config/name="Sinco and Portilizen"
 config/version="0.1.0b"
-config/tags=PackedStringArray("june2025", "salida")
+config/tags=PackedStringArray("cancelled", "june2025", "salida")
 run/main_scene="uid://cttp6yhbb2bef"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://.dev/AppIcon-16.png"
+
+[autoload]
+
+Title="*res://scripts/autoload/Title.gd"
 
 [display]
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
 window/stretch/mode="viewport"
+
+[editor]
+
+version_control/plugin_name="GitPlugin"
+version_control/autoload_on_startup=true
 
 [editor_plugins]
 

@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=3 uid="uid://cttp6yhbb2bef"]
+
+[ext_resource type="PackedScene" uid="uid://wrguxwwvhmyd" path="res://states/menus/character_ring.tscn" id="1_bxibc"]
+[ext_resource type="Script" uid="uid://dkm1201w5plgh" path="res://states/menus/title/state_manager.gd" id="2_sc25g"]
+
+[node name="TitleState" type="Node2D"]
+
+[node name="Static Layer" type="Node2D" parent="."]
+
+[node name="Backdrop" type="ColorRect" parent="Static Layer"]
+offset_right = 1280.0
+offset_bottom = 720.0
+
+[node name="Floordrop" type="ColorRect" parent="Static Layer"]
+offset_top = 530.0
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0.843137, 0.843137, 0.843137, 1)
+
+[node name="VersionLabel" type="Label" parent="Static Layer"]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 330.0
+offset_bottom = 53.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Sinco and Portilizen v0.1b
+Running on Godot v4.4.1"
+autowrap_mode = 3
+
+[node name="Animated Layer" type="Node2D" parent="."]
+
+[node name="CharacterRing" parent="Animated Layer" instance=ExtResource("1_bxibc")]
+position = Vector2(640, 240)
+
+[node name="Scripts" type="Node" parent="."]
+
+[node name="State Manager" type="Node" parent="Scripts"]
+script = ExtResource("2_sc25g")

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://wrguxwwvhmyd"]
+
+[ext_resource type="Texture2D" uid="uid://bwl14ekfnv831" path="res://assets/images/titlescreen/CharacterRing-characters.png" id="1_3dy0j"]
+[ext_resource type="Texture2D" uid="uid://cigldymbcin5h" path="res://assets/images/titlescreen/CharacterRing.png" id="2_8sbws"]
+
+[node name="CharacterRing" type="Node2D"]
+scale = Vector2(4, 4)
+
+[node name="Characters" type="Sprite2D" parent="."]
+texture = ExtResource("1_3dy0j")
+
+[node name="Ring" type="Sprite2D" parent="."]
+texture = ExtResource("2_8sbws")
